@@ -29,7 +29,7 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="hangman"
                 options={{
-                    title: 'Adam Asmaca',
+                    title: 'Kelimeyi Tahmin Et',
                     tabBarIcon: ({ color, focused }) => (
                         <FontAwesome6 name="sign-hanging" size={24} color={color} />
                     ),

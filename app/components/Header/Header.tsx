@@ -4,7 +4,7 @@ import React from 'react'
 const Header = () => {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Adam Asmaca</Text>
+            <Text style={styles.text}>Kelimeyi Tahmin Et</Text>
         </View>
     )
 }
