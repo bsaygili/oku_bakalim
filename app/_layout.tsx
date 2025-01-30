@@ -9,7 +9,7 @@ export default function RootLayout() {
 
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar style="auto" />
       <Stack>
         <Stack.Screen name="(pages)" options={{ headerShown: false, }} />
         <Stack.Screen name="+not-found" />

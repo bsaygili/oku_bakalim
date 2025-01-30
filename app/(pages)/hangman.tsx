@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { CustomModal, Header, InputContainer, Keyboard, StickMan, WordContainer } from '../components';
 import oppositeWords from '@/assets/mock/oppositeWords.json';
-import { gameStatus, useHangmanGame } from './lib';
+import { gameStatus } from '../shared/constants';
+import { useHangmanGame } from '../shared/useHangmanGame';
 
 
 
