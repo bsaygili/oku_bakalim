@@ -6,7 +6,7 @@ import { usePushNotification } from '@/app/shared/usePushNotification';
 const Notification = () => {
 
     const { content, expoPushToken, sendPushNotification } = usePushNotification();
-    console.log('expoPushToken', expoPushToken)
+    // console.log('expoPushToken', expoPushToken)
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'space-around' }}>
             <Text style={{ color: colors.warning }}>Your Expo push token: {expoPushToken}</Text>
