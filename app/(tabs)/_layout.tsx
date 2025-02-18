@@ -2,7 +2,7 @@ import React from 'react';
 import { Tabs } from 'expo-router';
 import * as VectorIcons from '@expo/vector-icons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import { colors } from '@/app/common/colors';
+import colors from '../common/colors';
 
 
 
@@ -14,6 +14,7 @@ export default function TabLayout() {
                 tabBarActiveTintColor: colors.tabBarActiveTintColor,
                 tabBarStyle: {
                     backgroundColor: colors.backgroundColor,
+
                 },
             }}
         >

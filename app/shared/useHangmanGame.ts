@@ -1,14 +1,14 @@
 import { useCallback, useMemo, useState } from "react";
 import oppositeWords from '@/assets/mock/oppositeWords.json';
-import { gameStatus, MAX_WRONG_GUESSES } from "../common/constants";
+import { gameStatus, MAX_WRONG_GUESSES } from "@/app/common/constants";
 
-export const useHangmanGame = () => {
+const useHangmanGame = () => {
     const [random, setRandom] = useState<number>(Math.ceil(Math.random() * oppositeWords.length));
     const [correctLetters, setCorrectLetters] = useState<string>('');
     const [wrongLetters, setWrongLetters] = useState<string>('');
     const [status, setStatus] = useState<string>('');
 
-    const randomAns = useMemo(() => oppositeWords[random].answer.toUpperCase(), [random]);
+    const randomAns = useMemo(() => oppositeWords[random]?.answer?.toUpperCase(), [random]);
 
     const winCheck = useCallback((letters: string) => {
         const isWin = randomAns.split('').every((char: string) => letters.includes(char));
@@ -45,3 +45,5 @@ export const useHangmanGame = () => {
         handleNextWord, random
     };
 };
+
+export default useHangmanGame;

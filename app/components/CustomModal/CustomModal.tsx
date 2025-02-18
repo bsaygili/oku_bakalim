@@ -1,8 +1,8 @@
-import { colors } from '@/app/common/colors';
+
 import React from 'react';
 import { View, Text, Modal, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
-
+import colors from '@/app/common/colors';
 
 type Props = {
     visible: boolean;

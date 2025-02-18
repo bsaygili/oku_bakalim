@@ -1,6 +1,7 @@
+
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { colors } from '@/app/common/colors'
+import colors from '@/app/common/colors'
 
 type WordContainerProps = {
     wordInfo: {
@@ -21,7 +22,7 @@ const WordContainer: React.FC<WordContainerProps> = ({ wordInfo }) => {
             </View>
             {isHintOpen &&
                 <View>
-                    <Text>Bu kelime, {wordInfo.answer.charAt(0)} ile başlar.</Text>
+                    <Text>Bu kelime, {wordInfo?.answer?.charAt(0)} ile başlar.</Text>
                 </View>}
         </View>
     )

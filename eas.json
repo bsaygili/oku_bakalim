@@ -17,10 +17,12 @@
         "APP_VARIANT": "production"
       },
       "android": {
-        "resourceClass": "medium"
+        "resourceClass": "medium",
+        "image": "latest"
       },
       "ios": {
-        "resourceClass": "medium"
+        "resourceClass": "medium",
+        "image": "latest"
       }
     },
     "ios-simulator": {

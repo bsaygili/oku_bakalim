@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { colors } from '@/app/common/colors'
+import colors from '@/app/common/colors'
 
 type InputContainerProps = {
     keyBoard: string,

@@ -2,6 +2,7 @@ import React from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from "expo-status-bar";
 import registerNNPushToken from 'native-notify';
+import colors from './common/colors';
 
 
 export default function RootLayout() {
@@ -9,12 +10,16 @@ export default function RootLayout() {
 
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar
+        style="dark"
+        backgroundColor={colors.shapeColor}
+        hideTransitionAnimation="slide"
+      />
+
       <Stack>
-        <Stack.Screen name="(pages)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
-
     </>
   );
 }

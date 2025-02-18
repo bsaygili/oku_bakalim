@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
     key: '#606B83',
     inputBox: '#6B718044',
     Modal: '#82a7c9',
@@ -18,3 +18,5 @@ export const colors = {
     mediumGrey: '#cccccc',
     gray: '#333',
 }
+
+export default colors;

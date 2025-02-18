@@ -6,3 +6,6 @@ export const gameStatus = {
 
 export const MAX_WRONG_GUESSES = 6;
 export const MINWORDLENGTH = 3;
+
+
+export default gameStatus;

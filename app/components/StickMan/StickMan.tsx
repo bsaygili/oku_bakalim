@@ -2,8 +2,7 @@ import { View } from 'react-native'
 import React from 'react'
 import Svg, { Ellipse, G, Line, Rect } from 'react-native-svg'
 import * as Animatable from 'react-native-animatable';
-import { colors } from '@/app/common/colors';
-
+import colors from '@/app/common/colors';
 
 const LineComponent = (props: any) => <Line {...props} />;
 const RectComponent = (props: any) => <Rect {...props} />;
@@ -18,6 +17,8 @@ type StickManProps = {
 }
 
 const StickMan: React.FC<StickManProps> = ({ wrongWordCount }) => {
+
+
     const ref = React.useRef(null);
     const Rope = <AnimatableLine ref={ref} animation='fadeIn' x1="200" y1="0" x2="200" y2="140" stroke="brown" strokeWidth="5" />
     const Head = <AnimatableEllipse ref={ref} animation='fadeIn' cx="200" cy="150" rx="40" ry="25" fill={colors.shapeColor} />

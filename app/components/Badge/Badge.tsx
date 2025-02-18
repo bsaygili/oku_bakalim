@@ -1,7 +1,8 @@
 
-import { colors } from '@/app/common/colors';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+
+import colors from '@/app/common/colors';
 
 
 type BadgeProps = {

@@ -1,1 +1,3 @@
-export const letters = 'ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWXYZ'.split('');
+const letters = 'ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWXYZ'.split('');
+
+export default letters;

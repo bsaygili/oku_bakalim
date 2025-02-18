@@ -79,8 +79,7 @@ async function registerForPushNotificationsAsync() {
         handleRegistrationError('Must use physical device for push notifications');
     }
 }
-
-export const usePushNotification = () => {
+const usePushNotification = () => {
     const [expoPushToken, setExpoPushToken] = React.useState('');
     const [notification, setNotification] = React.useState<Notifications.Notification | undefined>(
         undefined
@@ -121,3 +120,5 @@ export const usePushNotification = () => {
         },
     }
 }
+
+export default usePushNotification;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, ImageBackground, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
-import { letters } from '@/app/common/letters';
+import letters from '@/app/common/letters';
 
 type ChalkBoardType = {
     selectedLetters: string;
