@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Link, Stack } from 'expo-router';
-import { colors } from './common';
+import { colors } from '@/app/common/colors';
 
 export default function NotFoundScreen() {
     return (

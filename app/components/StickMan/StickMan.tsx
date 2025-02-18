@@ -2,8 +2,8 @@ import { View } from 'react-native'
 import React from 'react'
 import Svg, { Ellipse, G, Line, Rect } from 'react-native-svg'
 import * as Animatable from 'react-native-animatable';
+import { colors } from '@/app/common/colors';
 
-import { colors } from '@/app/common';
 
 const LineComponent = (props: any) => <Line {...props} />;
 const RectComponent = (props: any) => <Rect {...props} />;

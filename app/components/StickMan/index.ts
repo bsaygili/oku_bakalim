@@ -1,1 +1,0 @@
-export { default as StickMan } from './StickMan';

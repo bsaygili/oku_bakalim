@@ -1,5 +1,7 @@
+import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { colors } from '../common';
+import { Link } from 'expo-router';
+import { colors } from '@/app/common/colors';
 
 export default function AboutScreen() {
     return (
@@ -16,6 +18,9 @@ export default function AboutScreen() {
             <Text style={styles.text}>
                 bahadirsaygili.com
             </Text>
+            <Link href={"/(pages)/hangman"} android_hyphenationFrequency="full" style={styles.text}>
+                https://medium.com/@bhdrsaygili
+            </Link>
         </View>
     );
 }

@@ -1,15 +1,15 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { CustomModal, Header, InputContainer, Keyboard, StickMan, WordContainer } from '../components';
 import oppositeWords from '@/assets/mock/oppositeWords.json';
-import { gameStatus } from '../shared/constants';
+import { gameStatus } from '../common/constants';
 import { useHangmanGame } from '../shared/useHangmanGame';
+import { CustomModal, Header, InputContainer, Keyboard, StickMan, WordContainer } from '../components';
 
 
 
 
 
-const HangmanScreen: React.FC = () => {
+export default function HangmanScreen() {
     const { random, randomAns, correctLetters, wrongLetters, status, storeCorrectLetters, handleNextWord } = useHangmanGame();
 
     return (
@@ -49,5 +49,3 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 });
-
-export default HangmanScreen;

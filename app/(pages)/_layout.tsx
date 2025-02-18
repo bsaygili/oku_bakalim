@@ -1,8 +1,8 @@
+import React from 'react';
 import { Tabs } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import Feather from '@expo/vector-icons/Feather';
+import * as VectorIcons from '@expo/vector-icons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import { colors } from '../common';
+import { colors } from '@/app/common/colors';
 
 
 
@@ -22,7 +22,7 @@ export default function TabLayout() {
                 options={{
                     title: 'Kelimelik',
                     tabBarIcon: ({ color, focused }) => (
-                        <Feather name={focused ? "book-open" : "book"} size={24} color={color} />
+                        <VectorIcons.Feather name={focused ? "book-open" : "book"} size={24} color={color} />
                     ),
                 }}
             />
@@ -34,17 +34,24 @@ export default function TabLayout() {
                         <FontAwesome6 name="sign-hanging" size={24} color={color} />
                     ),
                 }}
+            /> <Tabs.Screen
+                name="settings"
+                options={{
+                    title: 'Ayarlar',
+                    tabBarIcon: ({ color, focused }) => (
+                        <VectorIcons.Ionicons name={focused ? 'settings' : 'settings-outline'} color={color} size={24} />
+                    ),
+                }}
             />
             <Tabs.Screen
                 name="about"
                 options={{
                     title: 'Hakkımızda',
                     tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'bonfire-sharp' : 'bonfire-outline'} color={color} size={24} />
+                        <VectorIcons.Ionicons name={focused ? 'bonfire-sharp' : 'bonfire-outline'} color={color} size={24} />
                     ),
                 }}
             />
-
         </Tabs>
     );
 }

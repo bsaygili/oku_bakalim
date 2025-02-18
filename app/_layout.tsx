@@ -9,9 +9,9 @@ export default function RootLayout() {
 
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
       <Stack>
-        <Stack.Screen name="(pages)" options={{ headerShown: false, }} />
+        <Stack.Screen name="(pages)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
 

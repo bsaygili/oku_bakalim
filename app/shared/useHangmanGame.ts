@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from "react";
 import oppositeWords from '@/assets/mock/oppositeWords.json';
-import { gameStatus, MAX_WRONG_GUESSES } from "./constants";
+import { gameStatus, MAX_WRONG_GUESSES } from "../common/constants";
 
 export const useHangmanGame = () => {
     const [random, setRandom] = useState<number>(Math.ceil(Math.random() * oppositeWords.length));

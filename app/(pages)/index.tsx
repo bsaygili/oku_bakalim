@@ -2,12 +2,13 @@
 import React, { useState } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import turkishWords from '../../assets/mock/turkishWords.json';
-import { Badge, ChalkBoard, CustomModal } from '@/app/components';
-import { colors } from '../common';
+import { Badge, ChalkBoard, CustomModal } from '../components';
+import { MINWORDLENGTH } from '@/app/common/constants';
+import { colors } from '@/app/common/colors';
 
-const MINWORDLENGTH = 3;
 
-const HomeScreen = () => {
+
+export default function HomeScreen() {
     const [correctVisible, setCorrectVisible] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(false);
 
@@ -51,6 +52,8 @@ const HomeScreen = () => {
 
     return (
         <SafeAreaView>
+            <CustomModal type="warning" visible={visible} hideCustomAlert={() => setVisible(pr => !pr)} title='Harf Seçilmedi' message='Lütfen en az 3 harf seçiniz :)' />
+            <CustomModal visible={correctVisible} hideCustomAlert={() => setCorrectVisible(pr => !pr)} />
             <FlatList
                 data={[{ key: 'chalkboard' }]}
                 keyExtractor={(item) => item.key}
@@ -62,15 +65,8 @@ const HomeScreen = () => {
                             generateWords={generateWordsOffline}
                             onClear={onClear}
                         />
-                        <CustomModal type="warning" visible={visible} hideCustomAlert={() => setVisible(pr => !pr)} title='Harf Seçilmedi' message='Lütfen en az 3 harf seçiniz :)' />
-                        <CustomModal visible={correctVisible} hideCustomAlert={() => setCorrectVisible(pr => !pr)} />
-                        <View style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            marginVertical: 20,
-                        }}>
+
+                        <View style={styles.informationContainer}>
                             <Text style={styles.sectionTitle}>Kelimeler</Text>
                             <Badge size={30} value={correctWordCounter} />
                         </View>
@@ -100,8 +96,12 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.backgroundColor,
-        padding: 10,
-        flex: 1,
+    },
+    informationContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        margin: 20,
     },
     wordsSection: {
         marginTop: 20,
@@ -156,4 +156,3 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen;

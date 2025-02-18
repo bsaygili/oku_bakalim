@@ -1,18 +1,20 @@
-import { colors } from '@/app/common';
+
+import { colors } from '@/app/common/colors';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+
 type BadgeProps = {
-    value: string | number; // The text or number displayed in the badge
-    color?: string; // Background color for the badge
-    textColor?: string; // Text color
-    size?: number; // Size of the badge
+    value: string | number;
+    color?: string;
+    textColor?: string;
+    size?: number;
 };
 
 const Badge: React.FC<BadgeProps> = ({
     value,
-    color = colors.error, // Default color is red
-    textColor = colors.lightGrey, // Default text color is white
+    color = colors.error,
+    textColor = colors.lightGrey,
     size = 24, // Default size is 24px
 }) => {
     return (

@@ -1,10 +1,10 @@
-export { ChalkBoard } from './ChalkBoard'
-export { CustomModal } from './Modal'
-export { Button } from './Button'
-export { Badge } from './Badge'
-export { Header } from './Header'
-export { StickMan } from './StickMan'
-export { WordContainer } from './WordContainer'
-export { InputContainer } from './InputContainer'
-export { Keyboard } from './Keyboard'
-export { Notification } from './Notification'  
+export { default as Badge } from './Badge/Badge'
+export { default as Button } from "./Button/Button";
+export { default as ChalkBoard } from "./ChalkBoard/ChalkBoard";
+export { default as Header } from "./Header/Header";
+export { default as InputContainer } from "./InputContainer/InputContainer";
+export { default as Keyboard } from "./Keyboard/Keyboard";
+export { default as CustomModal } from "./CustomModal/CustomModal";
+export { default as Notification } from "./Notification/Notification";
+export { default as StickMan } from "./StickMan/StickMan";
+export { default as WordContainer } from "./WordContainer/WordContainer";

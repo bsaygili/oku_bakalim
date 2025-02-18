@@ -1,12 +1,12 @@
+import React from 'react';
 import { Text, View, Button } from 'react-native';
-import { colors } from '@/app/common';
 import { usePushNotification } from '@/app/shared/usePushNotification';
+import { colors } from '@/app/common/colors';
 
 
 const Notification = () => {
 
-    const { content, expoPushToken, sendPushNotification } = usePushNotification();
-    // console.log('expoPushToken', expoPushToken)
+    const { content, expoPushToken } = usePushNotification();
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'space-around' }}>
             <Text style={{ color: colors.warning }}>Your Expo push token: {expoPushToken}</Text>
@@ -18,7 +18,7 @@ const Notification = () => {
             <Button
                 title="Press to Send Notification"
                 onPress={async () => {
-                    await sendPushNotification(expoPushToken);
+                    await console.log('expoPushToken', expoPushToken)
                 }}
             />
         </View>

@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { colors } from '@/app/common'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { colors } from '@/app/common/colors'
 
 type WordContainerProps = {
     wordInfo: {

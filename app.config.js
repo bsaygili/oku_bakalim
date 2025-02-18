@@ -13,6 +13,9 @@ export default {
     ios: {
       supportsTablet: true,
       bundleIdentifier: IS_DEV ? "okubakalim.dev" : "okubakalim",
+      infoPlist: {
+        ITSAppUsesNonExemptEncryption: false,
+      },
     },
     android: {
       adaptiveIcon: {
