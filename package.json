@@ -9,13 +9,16 @@
     "ios": "expo start -c --ios",
     "web": "expo start -c --web",
     "test": "jest --watchAll",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "build:all": "eas build --profile development --platform all",
+    "build:submit": "eas build --platform all auto-submit"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
+    "@react-native-async-storage/async-storage": "^2.1.1",
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/native": "^7.0.0",
     "expo": "~52.0.26",

@@ -2,17 +2,22 @@ import React from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import * as Linking from 'expo-linking'
 import * as VectorIcons from '@expo/vector-icons';
-import colors from '../common/colors';
-import appconfig from '../../app.config'
+import appconfig from '../../../app.config'
 import { Link } from 'expo-router';
+import colors from '../../common/colors';
+import { useSettings } from '../../context/SettingsContext';
+import useGlobalStyles from '../../shared/useGlobalStyles';
 
-export default function AboutScreen() {
+export default function AboutMe() {
+    const { isDarkMode } = useSettings();
+    const { getStyles } = useGlobalStyles();
+    const globalStyles = getStyles(isDarkMode);
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.text}>
                 Geliştici: Bahadır Saygılı
             </Text>
-            <Text style={styles.text}>
+            <Text style={globalStyles.text}>
                 Sürüm: {appconfig.expo.version}
             </Text>
             <View style={styles.contactContainer}>
@@ -65,21 +70,10 @@ export default function AboutScreen() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: colors.backgroundColor,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    text: {
-        color: colors.headerTintColor,
-        fontSize: 20,
-    },
     contactContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        margin: 50,
-        gap: 30
+        marginVertical: 20,
     }
 });

@@ -9,7 +9,7 @@ type Props = {
     hideCustomAlert: () => void;
     title?: string;
     message?: string;
-    type?: 'success' | 'error' | 'warning';
+    type?: 'success' | 'error' | 'warning' | 'info';
 }
 
 const CustomModal: React.FC<Props> = ({
@@ -26,6 +26,8 @@ const CustomModal: React.FC<Props> = ({
                 return colors.error;
             case 'warning':
                 return colors.warning;
+            case 'info':
+                return colors.info;
             default:
                 return colors.success;
         }

@@ -3,18 +3,19 @@ import { Tabs } from 'expo-router';
 import * as VectorIcons from '@expo/vector-icons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import colors from '../common/colors';
+import { useSettings } from '../context/SettingsContext';
 
 
 
 export default function TabLayout() {
+    const { isDarkMode } = useSettings();
     return (
         <Tabs
             screenOptions={{
                 headerShown: false,
-                tabBarActiveTintColor: colors.tabBarActiveTintColor,
+                tabBarActiveTintColor: isDarkMode ? colors.tabBarActiveTintColor : colors.shapeColor,
                 tabBarStyle: {
-                    backgroundColor: colors.backgroundColor,
-
+                    backgroundColor: isDarkMode ? colors.backgroundColor : colors.light,
                 },
             }}
         >
@@ -31,7 +32,8 @@ export default function TabLayout() {
                 name="hangman"
                 options={{
                     title: 'Kelimeyi Tahmin Et',
-                    tabBarIcon: ({ color, focused }) => (
+                    headerShown: true,
+                    tabBarIcon: ({ color }) => (
                         <FontAwesome6 name="sign-hanging" size={24} color={color} />
                     ),
                 }}
@@ -39,20 +41,13 @@ export default function TabLayout() {
                 name="settings"
                 options={{
                     title: 'Ayarlar',
+                    headerShown: true,
                     tabBarIcon: ({ color, focused }) => (
                         <VectorIcons.Ionicons name={focused ? 'settings' : 'settings-outline'} color={color} size={24} />
                     ),
                 }}
             />
-            <Tabs.Screen
-                name="about"
-                options={{
-                    title: 'Hakkımızda',
-                    tabBarIcon: ({ color, focused }) => (
-                        <VectorIcons.Ionicons name={focused ? 'bonfire-sharp' : 'bonfire-outline'} color={color} size={24} />
-                    ),
-                }}
-            />
+
         </Tabs>
     );
 }

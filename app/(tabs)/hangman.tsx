@@ -2,8 +2,10 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import oppositeWords from '../../assets/mock/oppositeWords.json';
 import { gameStatus } from '../common/constants';
-import { CustomModal, Header, InputContainer, Keyboard, StickMan, WordContainer } from '../components';
+import { CustomModal, InputContainer, Keyboard, StickMan, WordContainer } from '../components';
 import useHangmanGame from '../shared/useHangmanGame';
+import { useSettings } from '../context/SettingsContext';
+import useGlobalStyles from '../shared/useGlobalStyles';
 
 
 
@@ -12,8 +14,11 @@ import useHangmanGame from '../shared/useHangmanGame';
 export default function HangmanScreen() {
     const { random, randomAns, correctLetters, wrongLetters, status, storeCorrectLetters, handleNextWord } = useHangmanGame();
 
+    const { isDarkMode } = useSettings();
+    const { getStyles } = useGlobalStyles();
+    const globalStyles = getStyles(isDarkMode);
     return (
-        <View style={styles.container}>
+        <View style={globalStyles.container}>
             <CustomModal
                 visible={status === gameStatus.win || status === gameStatus.lose}
                 title={status === gameStatus.win ? 'Aferin' : 'Kaybettin'}
@@ -21,7 +26,6 @@ export default function HangmanScreen() {
                 type={status === gameStatus.win ? 'success' : 'error'}
                 hideCustomAlert={handleNextWord}
             />
-            <Header />
             <View style={styles.row}>
                 <StickMan wrongWordCount={wrongLetters.length} />
                 <WordContainer wordInfo={oppositeWords[random]} />
@@ -37,12 +41,6 @@ export default function HangmanScreen() {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        paddingTop: 20,
-        paddingHorizontal: 10,
-    },
     row: {
         flexDirection: 'row',
         justifyContent: 'space-between',
