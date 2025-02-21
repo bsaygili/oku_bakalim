@@ -50,6 +50,7 @@ app-example
 # custom
 
 firebase/
+google-services.json
 
 # Ignore native directories (if you are using EAS Build)
 
