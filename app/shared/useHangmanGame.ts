@@ -8,7 +8,7 @@ const useHangmanGame = () => {
     const [wrongLetters, setWrongLetters] = useState<string>('');
     const [status, setStatus] = useState<string>('');
 
-    const randomAns = useMemo(() => oppositeWords[random]?.answer?.toUpperCase(), [random]);
+    const randomAns = useMemo(() => oppositeWords[random]?.answer, [random]);
 
     const winCheck = useCallback((letters: string) => {
         const isWin = randomAns.split('').every((char: string) => letters.includes(char));

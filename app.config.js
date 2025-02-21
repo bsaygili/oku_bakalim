@@ -25,6 +25,7 @@ export default {
       package: IS_DEV
         ? "com.bahadir_dev.okubakalim.dev"
         : "com.bahadir_dev.okubakalim",
+      googleServicesFile: "./google-services.json",
     },
     web: {
       bundler: "metro",

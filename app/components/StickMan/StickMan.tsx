@@ -4,6 +4,7 @@ import Svg, { Ellipse, G, Line, Rect } from 'react-native-svg'
 import * as Animatable from 'react-native-animatable';
 import colors from '@/app/common/colors';
 
+
 const AnimatableLine = Animatable.createAnimatableComponent(forwardRef((props, ref) => <Line ref={ref} {...props} />));
 const AnimatableRect = Animatable.createAnimatableComponent(forwardRef((props, ref) => <Rect ref={ref} {...props} />));
 const AnimatableEllipse = Animatable.createAnimatableComponent(forwardRef((props, ref) => <Ellipse ref={ref} {...props} />));

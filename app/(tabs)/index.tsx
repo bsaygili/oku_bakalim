@@ -36,7 +36,7 @@ export default function HomeScreen() {
             setWords(turkishWords.filter((word) => {
                 return (
                     word.length >= MINWORDLENGTH &&
-                    word.split('').every((char) => inputLetters.includes(char.toUpperCase()))
+                    word.split('').every((char) => inputLetters.includes(char))
                 );
             }).sort(() => 0.5 - Math.random()).slice(0, 5));
         }

@@ -14,7 +14,7 @@ const WordContainer: React.FC<WordContainerProps> = ({ wordInfo }) => {
     return (
         <View style={styles.container}>
             <Text>Zıt Anlamlı:</Text>
-            <Text style={styles.word}>{wordInfo.word}</Text>
+            <Text style={styles.word}>{wordInfo?.word}</Text>
             <View style={styles.hintContainer}>
                 <TouchableOpacity onPress={setIsHintOpen} >
                     <Text >İpucu</Text>
