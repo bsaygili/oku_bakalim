@@ -10,8 +10,9 @@
     "web": "expo start -c --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "build:all": "eas build --profile development --platform all",
-    "build:submit": "eas build --platform all auto-submit"
+    "builddev:all": "eas build --profile development --platform all",
+    "buildprod:all": "eas build --profile production --platform all",
+    "buildios:submit": "eas submit -p ios --latest --profile production"
   },
   "jest": {
     "preset": "jest-expo"
