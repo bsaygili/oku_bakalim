@@ -12,7 +12,8 @@
     "lint": "expo lint",
     "builddev:all": "eas build --profile development --platform all",
     "buildprod:all": "eas build --profile production --platform all",
-    "buildios:submit": "eas submit -p ios --latest --profile production"
+    "ios:submit": "eas submit -p ios --latest --profile production",
+    "android:submit": "eas submit -p android --latest --profile production"
   },
   "jest": {
     "preset": "jest-expo"
