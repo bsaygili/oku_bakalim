@@ -75,7 +75,7 @@ export default function HomeScreen() {
 
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={[styles.container, isDarkMode && styles.darkContainer]}>
             <CustomModal
                 type='warning'
                 title='Harf Seçilmedi'
@@ -126,7 +126,7 @@ export default function HomeScreen() {
                             <Text style={[styles.sectionTitle, isDarkMode && styles.darkText]}>Kelimeler</Text>
                             <Badge size={30} value={correctWordCounter} />
                         </View>
-                        <View style={styles.wordsSection}>
+                        <View>
                             {!words.length ? (
                                 <Text style={styles.emptyMessage}>Henüz kelime üretmedik </Text>
                             ) : (
