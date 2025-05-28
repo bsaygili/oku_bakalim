@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Link, Stack } from 'expo-router';
-import colors from '@/app/common/colors';
+import colors from '@/common/colors';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function NotFoundScreen() {

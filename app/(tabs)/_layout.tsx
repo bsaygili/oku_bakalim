@@ -2,8 +2,8 @@ import React from 'react';
 import { Tabs } from 'expo-router';
 import * as VectorIcons from '@expo/vector-icons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import colors from '../common/colors';
-import { useSettings } from '../context/SettingsContext';
+import { useSettings } from '../../context/SettingsContext';
+import colors from '@/common/colors';
 
 
 

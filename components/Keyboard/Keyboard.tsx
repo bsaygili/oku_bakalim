@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import colors from '@/app/common/colors'
-import letters from '@/app/common/letters'
+import letters from '@/common/letters'
+import colors from '@/common/colors'
 
 
 const ABCBoard = ({ letter, onPress, correctLetters, wrongLetters }: { letter: string, onPress: (letter: string) => void, correctLetters: string[], wrongLetters: string[] }) => {

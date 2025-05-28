@@ -11,9 +11,9 @@ import {
     TouchableWithoutFeedback,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { AboutMe } from '../components';
-import { useSettings } from '../context/SettingsContext';
-import useGlobalStyles from '../shared/useGlobalStyles';
+import { AboutMe } from '../../components';
+import { useSettings } from '../../context/SettingsContext';
+import useGlobalStyles from '../../shared/useGlobalStyles';
 
 export default function SettingsScreen() {
     const { isDarkMode, toggleDarkMode, wordLimit, updateWordLimit } = useSettings();

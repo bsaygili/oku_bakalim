@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, ImageBackground, View, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
-import letters from '@/app/common/letters';
+import letters from '@/common/letters';
 
 type ChalkBoardType = {
     selectedLetters: string;
@@ -20,7 +20,7 @@ const ChalkBoard: React.FC<ChalkBoardType> = ({
 }) => {
 
     const [loaded] = useFonts({
-        'GloriaHallelujah': require('../../../assets/fonts/GloriaHallelujah-Regular.ttf'),
+        'GloriaHallelujah': require('@/assets/fonts/GloriaHallelujah-Regular.ttf'),
     });
     if (!loaded) {
         return null;
@@ -38,7 +38,7 @@ const ChalkBoard: React.FC<ChalkBoardType> = ({
 
     return (
         <ImageBackground
-            source={require('../../../assets/images/chalkboard.png')}
+            source={require('@/assets/images/chalkboard.png')}
             style={styles.imagebackground}
 
         >

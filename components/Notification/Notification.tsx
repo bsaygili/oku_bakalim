@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
-import colors from '@/app/common/colors';
-import usePushNotification from '@/app/shared/usePushNotification';
+import colors from '@/common/colors';
+import usePushNotification from '@/shared/usePushNotification';
 
 
 const Notification = () => {

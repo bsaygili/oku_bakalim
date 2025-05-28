@@ -3,11 +3,11 @@ import 'expo-dev-client';
 import React from 'react';
 import { Stack } from 'expo-router';
 import registerNNPushToken from 'native-notify';
-import colors from './common/colors';
-import { SettingsProvider, useSettings } from './context/SettingsContext';
+import { SettingsProvider, useSettings } from '../context/SettingsContext';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { Platform, StatusBar, StyleSheet } from 'react-native';
-import useGlobalStyles from './shared/useGlobalStyles';
+import useGlobalStyles from '../shared/useGlobalStyles';
+import colors from '@/common/colors';
 
 
 export default function RootLayout() {

@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import React, { forwardRef } from 'react'
 import Svg, { Ellipse, G, Line, Rect } from 'react-native-svg'
 import * as Animatable from 'react-native-animatable';
-import colors from '@/app/common/colors';
+import colors from '@/common/colors';
 
 
 const AnimatableLine = Animatable.createAnimatableComponent(forwardRef((props, ref) => <Line ref={ref} {...props} />));

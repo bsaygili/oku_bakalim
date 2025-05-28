@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState, useEffect } from "react";
 import oppositeWords from '@/assets/mock/oppositeWords.json';
-import { gameStatus, MAX_WRONG_GUESSES } from "@/app/common/constants";
+import { gameStatus, MAX_WRONG_GUESSES } from "@/common/constants";
 
 export interface WordInfo {
     id: number;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { gameStatus } from '../common/constants';
-import { CustomModal, InputContainer, Keyboard, StickMan, WordContainer } from '../components';
-import useHangmanGame from '../shared/useHangmanGame';
-import { useSettings } from '../context/SettingsContext';
-import useGlobalStyles from '../shared/useGlobalStyles';
+import { CustomModal, InputContainer, Keyboard, StickMan, WordContainer } from '../../components';
+import useHangmanGame from '../../shared/useHangmanGame';
+import { useSettings } from '../../context/SettingsContext';
+import useGlobalStyles from '../../shared/useGlobalStyles';
+import gameStatus from '@/common/constants';
 
 export default function HangmanScreen() {
     const { wordInfo, randomAns, correctLetters, wrongLetters, status, handleLetterInput, handleNextWord } = useHangmanGame();

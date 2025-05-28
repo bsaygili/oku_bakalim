@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, SafeAreaView, } from 'react-native';
 import turkishWords from '../../assets/mock/turkishWords.json';
-import { Badge, ChalkBoard, CustomModal } from '../components';
-import colors from '../common/colors';
-import { MINWORDLENGTH } from '../common/constants';
-import { useSettings } from '../context/SettingsContext';
+import { Badge, ChalkBoard, CustomModal } from '../../components';
+import { useSettings } from '../../context/SettingsContext';
+import { MINWORDLENGTH } from '@/common/constants';
+import colors from '@/common/colors';
 
 
 

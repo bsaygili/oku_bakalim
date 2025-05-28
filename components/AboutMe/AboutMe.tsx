@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import * as Linking from 'expo-linking'
 import * as VectorIcons from '@expo/vector-icons';
-import appconfig from '../../../app.config'
+import appconfig from '../../app.config'
 import { Link } from 'expo-router';
 import colors from '../../common/colors';
 import { useSettings } from '../../context/SettingsContext';

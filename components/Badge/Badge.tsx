@@ -1,8 +1,8 @@
 
+import colors from '@/common/colors';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import colors from '@/app/common/colors';
 
 
 type BadgeProps = {
@@ -16,7 +16,7 @@ const Badge: React.FC<BadgeProps> = ({
     value,
     color = colors.error,
     textColor = colors.lightGrey,
-    size = 24, // Default size is 24px
+    size = 24,
 }) => {
     return (
         <View
