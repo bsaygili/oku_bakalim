@@ -3,18 +3,18 @@ import React from 'react'
 import colors from '@/app/common/colors'
 
 type InputContainerProps = {
-    keyBoard: string,
+    enteredLetters: string[],
     answer: string,
 }
 const InputContainer: React.FC<InputContainerProps> = ({
-    keyBoard,
+    enteredLetters,
     answer,
 }) => {
     return (
         <View style={styles.box} >
             {answer.split('').map((letter, index) => (
                 <Text style={styles.answer} key={index} >
-                    {keyBoard.includes(letter) ? letter : ' - '}
+                    {enteredLetters.includes(letter) ? letter : ' - '}
                 </Text>
             ))}
         </View>
