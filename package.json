@@ -12,6 +12,7 @@
     "lint": "expo lint",
     "builddev:all": "eas build --profile development --platform all",
     "buildprod:all": "eas build --profile production --platform all",
+    "buildprod:ios": "eas build --profile production --platform ios",
     "ios:submit": "eas submit -p ios --latest --profile production",
     "android:submit": "eas submit -p android --latest --profile production"
   },
